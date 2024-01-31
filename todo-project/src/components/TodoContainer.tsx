@@ -9,7 +9,6 @@ const initialTodoForm = { id: 1, title: "", complete: false } as TodoType;
 
 export const TodoContainer = () => {
   const [todos, setTodos] = useState<TodoType[]>(initialTodos);
-
   const [todoForm, setTodoForm] = useState<TodoType>(initialTodoForm);
 
   const handleAddTodo = () => {

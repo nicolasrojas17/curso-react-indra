@@ -26,7 +26,10 @@ export const TodoList = ({ todos, setTodos, handleRemoveTodo, handleCheckTodo }:
       <table className="datatable">
         <thead>
           <tr>
-            <th></th> <th>Status</th> <th>Tarea</th> <th>Eliminar tarea</th>
+            <th></th>
+            <th>Status</th>
+            <th>Tarea</th>
+            <th>Eliminar tarea</th>
           </tr>
         </thead>
         <tbody>
