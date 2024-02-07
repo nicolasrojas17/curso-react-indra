@@ -31,7 +31,9 @@ export const useTodo = () => {
           title: responseAddTodo?.title,
           complete: responseAddTodo?.complete,
         } as TodoType;
-        todos.push(newTodo);
+        const newTodos = [...todos];
+        newTodos.push(newTodo);
+        setTodos(newTodos);
       }
     } else {
       addTodoLocal(todoForm, setTodos);
