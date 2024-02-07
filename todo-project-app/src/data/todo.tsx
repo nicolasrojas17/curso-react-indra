@@ -1,0 +1,28 @@
+import { TodoType } from "../types/TodoType";
+
+export const todoList: TodoType[] = [
+  {id : 1706655621140, title: 'Hacer algo bueno por alguien que me importa', complete : false},
+  {id : 1706655621141, title: 'Memoriza los cincuenta estados y sus capitales.', complete : false},
+  {id : 1706655621142, title: 'Ver una película clásica', complete : false},
+  {id : 1706655621143, title: 'Contribuya con código o una donación monetaria a un proyecto de software de código abierto.', complete : false},
+  {id : 1706655621144, title: 'Resolver un cubo de Rubik', complete : false},
+  {id : 1706655621145, title: 'Hornea pasteles para mí y mi vecino.', complete : false},
+  {id : 1706655621146, title: 'Ir a ver una producción de Broadway. Escribir una carta de agradecimiento a una persona influyente en mi vida.', complete : false},
+  {id : 1706655621147, title: 'Invita a algunos amigos a una noche de juegos.', complete : false},
+  {id : 1706655621148, title: 'Tener un juego de fútbol con algunos amigos.', complete : false},
+  {id : 1706655621149, title: 'Enviar un mensaje de texto a un amigo con el que no he hablado en mucho tiempo Organizar la despensa', complete : false},
+  {id : 1706655621110, title: 'Comprar una nueva decoración de la casa.', complete : true},
+  {id : 1706655621111, title: 'Planear unas vacaciones que siempre quise tomar', complete : false},
+  {id : 1706655621112, title: 'Limpiar el coche. Dibujar y colorear un mandala.', complete : false},
+  {id : 1706655621113, title: 'Crea un libro de cocina con tus recetas favoritas.', complete : false},
+  {id : 1706655621114, title: 'Hornea un pastel con algunos amigos Crea una pila de abono Haz una caminata en un parque local', complete : false},
+  {id : 1706655621115, title: 'Tome una clase en el centro comunitario local que le interese', complete : false},
+  {id : 1706655621116, title: 'Investigar un tema interesado en Planificar un viaje a otro país', complete : false},
+  {id : 1706655621117, title: 'Mejorar la escritura táctil', complete : false},
+  {id : 1706655621118, title: 'Aprenda Express.js', complete : false},
+  {id : 1706655621150, title: 'aprender caligrafia', complete : false},
+  {id : 1706655621130, title: 'Tener una sesión de fotos con algunos amigos.', complete : false},
+  {id : 1706655621131, title: 'Llevar al gato a pasear.', complete : false},
+  {id : 1706655621132, title: 'Haz tu propia creación LEGO', complete : false},
+  {id : 1706655621133, title: 'Ir al gimnasio', complete : true},
+];

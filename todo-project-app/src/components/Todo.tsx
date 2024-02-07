@@ -3,14 +3,15 @@ import { TodoType } from "../types/TodoType";
 interface PropsTodo {
   todo: TodoType;
   handleRemoveTodo: (id: number) => void;
-  handleCheckTodo: (id: number) => void;
+  handleCheckTodo: (id: number, checked: boolean) => void;
 }
 
 const Todo = ({ todo, handleRemoveTodo, handleCheckTodo }: PropsTodo) => {
+
   return (
     <>
       <td>
-        <input type="checkbox" checked={todo.complete} onChange={() => handleCheckTodo(todo.id)} />
+        <input type="checkbox" checked={todo.complete || false} onChange={(event) => handleCheckTodo(todo.id, event.target.checked)} />
       </td>
       <td>
         <span className={todo.complete ? "done" : "earring"}></span>

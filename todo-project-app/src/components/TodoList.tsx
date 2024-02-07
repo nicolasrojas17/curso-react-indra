@@ -6,7 +6,7 @@ interface PropsTodoList {
   todos: TodoType[];
   setTodos: (todos: TodoType[]) => void;
   handleRemoveTodo: (id: number) => void;
-  handleCheckTodo: (id: number) => void;
+  handleCheckTodo: (id: number, checked: boolean) => void;
 }
 
 export const TodoList = ({ todos, setTodos, handleRemoveTodo, handleCheckTodo }: PropsTodoList) => {
@@ -33,18 +33,20 @@ export const TodoList = ({ todos, setTodos, handleRemoveTodo, handleCheckTodo }:
           </tr>
         </thead>
         <tbody>
-          {todos.map((todo, index) => (
-            <tr
-              key={todo.id}
-              draggable
-              onDragStart={() => (dragTodo.current = index)}
-              onDragEnter={() => (draggedOverTodo.current = index)}
-              onDragEnd={handleSort}
-              onDragOver={(e) => e.preventDefault()}
-            >
-              <Todo todo={todo} handleRemoveTodo={handleRemoveTodo} handleCheckTodo={handleCheckTodo} />
-            </tr>
-          ))}
+          {todos
+            .map((_val, index, array) => array[array.length - 1 - index])
+            .map((todo, index) => (
+              <tr
+                key={todo.id}
+                draggable
+                onDragStart={() => (dragTodo.current = index)}
+                onDragEnter={() => (draggedOverTodo.current = index)}
+                onDragEnd={handleSort}
+                onDragOver={(e) => e.preventDefault()}
+              >
+                <Todo todo={todo} handleRemoveTodo={handleRemoveTodo} handleCheckTodo={handleCheckTodo} />
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
