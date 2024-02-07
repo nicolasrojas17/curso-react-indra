@@ -4,8 +4,18 @@ import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
 
 export const TodoContainer = () => {
-  const { todos, setTodos, todoForm, setTodoForm, getTodos, handleAddTodo, handleRemoveTodo, handleCheckTodo } =
-    useTodo();
+  const {
+    todos,
+    setTodos,
+    todoForm,
+    setTodoForm,
+    searchValue,
+    setSearchValue,
+    getTodos,
+    handleAddTodo,
+    handleRemoveTodo,
+    handleCheckTodo,
+  } = useTodo();
 
   useEffect(() => {
     getTodos();
@@ -20,6 +30,8 @@ export const TodoContainer = () => {
         <TodoList
           todos={todos}
           setTodos={setTodos}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
           handleRemoveTodo={handleRemoveTodo}
           handleCheckTodo={handleCheckTodo}
         />

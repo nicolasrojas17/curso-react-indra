@@ -70,15 +70,49 @@ body {
   }
 }
 
+.container-search {
+  width: 100%;
+  position: relative;
+  .search {
+    position: absolute;
+    right: 90px;
+    .input-search-todo {
+      margin: 0px 5px;
+      border: 2px solid $border-color;
+      color: $text-color;
+      background-color: transparent;
+      padding: 10px 25px;
+      border-radius: 25px;
+      width: 350px;
+      margin: 15px;
+      &:focus {
+        outline: 1px transparent;
+      }
+      &::-webkit-input-placeholder {
+        color: $text-color;
+        opacity: 50%;
+      }
+    }
+    span {
+      color: $border-color;
+      position: absolute;
+      top: 23px;
+      right: 30px;
+    }
+  }
+}
+
+
 .datatable-container {
+  thead{
+    height: 110px;
+    vertical-align: bottom;
+  }
   border-radius: 3px;
   color: $dt-text-color;
   font-size: 14px;
   overflow-x: auto;
   margin-bottom: 100px;
-  input {
-    cursor: pointer;
-  }
 }
 
 .datatable-container .datatable {

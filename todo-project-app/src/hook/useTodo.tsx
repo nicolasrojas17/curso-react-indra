@@ -7,6 +7,7 @@ const initialTodoForm = { id: 1, title: "", complete: false } as TodoType;
 
 export const useTodo = () => {
   const [todos, setTodos] = useState<TodoType[]>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
   const [todoForm, setTodoForm] = useState<TodoType>(initialTodoForm);
 
   const getTodos = async () => {
@@ -69,5 +70,16 @@ export const useTodo = () => {
     }
   };
 
-  return { todos, setTodos, todoForm, setTodoForm, getTodos, handleAddTodo, handleRemoveTodo, handleCheckTodo };
+  return {
+    todos,
+    setTodos,
+    todoForm,
+    setTodoForm,
+    searchValue,
+    setSearchValue,
+    getTodos,
+    handleAddTodo,
+    handleRemoveTodo,
+    handleCheckTodo,
+  };
 };
