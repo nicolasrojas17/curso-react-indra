@@ -96,15 +96,14 @@ body {
     span {
       color: $border-color;
       position: absolute;
-      top: 23px;
+      top: 24px;
       right: 30px;
     }
   }
 }
 
-
 .datatable-container {
-  thead{
+  thead {
     height: 110px;
     vertical-align: bottom;
   }
@@ -113,6 +112,11 @@ body {
   font-size: 14px;
   overflow-x: auto;
   margin-bottom: 100px;
+}
+
+.datatable-container thead {
+  height: 110px;
+  vertical-align: bottom;
 }
 
 .datatable-container .datatable {
@@ -194,4 +198,9 @@ body {
 
 .datatable-container .datatable tbody tr .earring::before {
   background-color: $dt-status-earring-color;
+}
+
+.datatable-container .datatable tbody tr .no-results{
+ width: auto !important;
+  margin: 20px 0px;
 }

@@ -21,7 +21,7 @@ export const TodoSearch = ({ searchValue, setSearchValue }: PropsTodoSearch) => 
           onChange={onInputChange}
         />
         <span>
-          <i className="bi bi-search h4"></i>
+          <i className="bi bi-search h5"></i>
         </span>
       </div>
     </div>

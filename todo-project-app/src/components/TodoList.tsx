@@ -55,6 +55,13 @@ export const TodoList = ({
           </tr>
         </thead>
         <tbody>
+          {todosFiltered.length === 0 && 
+          
+          <tr >
+            <td colSpan={4} className="no-results"> 
+          No hay resultados disponibles
+          </td>
+          </tr>}
           {todosFiltered
             .map((_val, index, array) => array[array.length - 1 - index])
             .map((todo, index) => (
